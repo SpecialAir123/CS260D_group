@@ -45,7 +45,7 @@ def per_example_mse_gradient(example, w):
     x = example[:-1]
     y = example[-1]
     # ... calculate the gradient here
-    weights_gradient = (np.dot(w, x) - y) * np.array(x)
+    weights_gradient = 2 * (np.dot(w, x) - y) * np.array(x)
     return weights_gradient
 
 # calculate cumulative sum of gradients
